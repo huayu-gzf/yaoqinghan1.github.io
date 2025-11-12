@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毕业邀请函</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            background-color: #f9f0f2;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: 
+                radial-gradient(#ffccd5 1px, transparent 1px),
+                radial-gradient(#ffccd5 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: 0 0, 25px 25px;
+        }
+        
+        /* 邀请函容器 */
+        .invitation-container {
+            background-color: #fff;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ff85a2;
+        }
+        
+        /* 装饰元素 */
+        .invitation-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, #ff85a2, #ffb6c1, #ffd1dc, #ffb6c1, #ff85a2);
+        }
+        
+        /* 标题样式 */
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            color: #ff4d6d;
+            margin-bottom: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            animation: fadeInScale 1.5s ease-out;
+        }
+        
+        /* 内容区域 */
+        .content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .content p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            animation: fadeIn 1s ease-out backwards;
+        }
+        
+        /* 为内容段落添加交错动画 */
+        .content p:nth-child(1) { animation-delay: 0.2s; }
+        .content p:nth-child(2) { animation-delay: 0.4s; }
+        .content p:nth-child(3) { animation-delay: 0.6s; }
+        .content p:nth-child(4) { animation-delay: 0.8s; }
+        .content p:nth-child(5) { animation-delay: 1s; }
+        
+        /* 分隔线 */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ffb6c1, transparent);
+            margin: 30px 0;
+        }
+        
+        /* 信息区域 */
+        .info {
+            text-align: center;
+            font-size: 1.1rem;
+            animation: fadeIn 1s ease-out 1.2s backwards;
+        }
+        
+        .info p {
+            margin-bottom: 15px;
+            color: #555;
+            transition: transform 0.3s ease;
+        }
+        
+        .info p:hover {
+            transform: scale(1.05);
+            color: #ff4d6d;
+        }
+        
+        /* 底部签名 */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #ff4d6d;
+            font-style: italic;
+            animation: fadeIn 1s ease-out 1.4s backwards, pulse 2s ease-in-out infinite;
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        /* 邀请函容器的悬停效果 */
+        .invitation-container:hover {
+            box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .invitation-container {
+            transition: all 0.3s ease;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .invitation-container {
+                padding: 30px 20px;
+            }
+            
+            .title {
+                font-size: 1.6rem;
+            }
+            
+            .content p,
+            .info p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .invitation-container {
+                padding: 20px 15px;
+                border-radius: 15px;
+            }
+            
+            .title {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+            
+            .content p,
+            .info p {
+                font-size: 0.95rem;
+                margin-bottom: 15px;
+            }
+            
+            .footer {
+                font-size: 1rem;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-container">
+        <h1 class="title">囍·👩‍🎓➕📸＝畢業照</h1>
+        
+        <div class="content">
+            <p>💌送呈好友：群友们</p>
+            <p>🎊良辰已定 吉日待訪💞</p>
+            <p>🍵吾有薄茶 以謝良友💞</p>
+            <p>🥳敬備畢業宴 隨候尊駕💞</p>
+            <p>💌誠摯的邀請您一起拍畢業照</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="info">
+            <p>🗓時間：2025年11月14日（农历九月廿五）星期五</p>
+            <p>🏫地址：廣東工程職業技術學院</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="footer">
+            <p>我們相約不見不散！❤️</p>
+        </div>
+    </div>
+</body>
+</html>
